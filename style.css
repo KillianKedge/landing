@@ -1,0 +1,106 @@
+CSS
+body {
+  font-family: sans-serif;
+  margin: 10;
+  padding: 10;
+  background-color: burlywood;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 0px;
+  text-align: center;
+}
+
+header img {
+  width: 100%; /* Réduit la largeur de l'image à 80% */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  opacity: 0.35; /* Rend l'image semi-transparente */
+}
+
+header h1 {
+  margin-top: 0;
+  font-size: 2em;
+  position: absolute; /* Positionne le texte absoluement */
+  top: 50%; /* Centre le texte verticalement */
+  left: 50%; /* Centre le texte horizontalement */
+  transform: translate(-50%, -50%); /* Déplace le texte de son point d'ancrage */
+  color: transparent; /* Rend le texte transparent */
+}
+
+header h1::after {
+  content: "BUDAPEST"; /* Texte à afficher */
+  position: absolute; /* Positionne le texte absoluement */
+  top: 50%; /* Centre le texte verticalement */
+  left: 50%; /* Centre le texte horizontalement */
+  transform: translate(-50%, -50%); /* Déplace le texte de son point d'ancrage */
+  color: ghostwhite; /* Couleur du texte */
+  font-size: 5.5em; /* Taille du texte */
+  font-weight: bold; /* Poids du texte */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: floralwhite;
+}
+
+
+h2 {
+  margin-top: 10;
+  text-align: center;
+}
+
+.lieu {
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lieu h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.lieu img {
+  margin: 0 auto;
+}
+
+.lieu p {
+  text-align: justify;
+}
+
+
+/* Modifications pour aligner les titres horizontalement */
+
+.conteneur-chapitre h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.conteneur-lieux {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto; /* Centre le conteneur-lieux horizontalement */
+}
+
+
+@media (max-width: 768px) {
+  .conteneur-lieux {
+    flex-direction: column;
+  }
+}
